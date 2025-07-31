@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .bg-stripes {
+    background-image: repeating-linear-gradient(
+      45deg,
+      #112240 0px,
+      #112240 20px,
+      #233554 20px,
+      #233554 40px
+    );
+    background-size: 40px 40px;
+    animation: moveStripes 1s linear infinite;
+    z-index: 1;
+    position: relative;
+  }
+  @keyframes moveStripes {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 40px 40px;
+    }
+  }
+}
